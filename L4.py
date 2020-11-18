@@ -25,7 +25,7 @@ W_t = np.empty((N, len(t)))	# N funciones del tiempo w(t) con T puntos
 for i in range(N):   
    X = vaX.rvs()        
    Y = vaY.rvs()     
-   w_t = X*np.cos(np.pi*t) + Y*np.sin(np.pi*t) 
+   w_t = X*np.cos(np.pi*t) + Y*np.sin(np.pi*t) # Proceso estocastico
    W_t[i,:] = w_t
    plt.plot(t, w_t)
 
@@ -39,9 +39,9 @@ E = 0*t
 plt.plot(t, E, '-.', lw=4)
 
 # Mostrar las realizaciones, y su promedio calculado y teórico
-plt.title('Realizaciones del proceso aleatorio $X(t)$')
+plt.title('Realizaciones del proceso aleatorio $W(t)$')
 plt.xlabel('$t$')
-plt.ylabel('$x_i(t)$')
+plt.ylabel('$w_i(t)$')
 plt.show()
 
 # T valores de desplazamiento tau
@@ -68,7 +68,7 @@ Rww = 100*np.cos(np.pi*taus)
 plt.plot(taus, Rww, '-.', lw=4, label='Correlación teórica')
 plt.title('Funciones de autocorrelación de las realizaciones del proceso')
 plt.xlabel(r'$\tau$')
-plt.ylabel(r'$R_{XX}(\tau)$')
+plt.ylabel(r'$R_{WW}(\tau)$')
 plt.legend()
 plt.show()
 
@@ -78,7 +78,7 @@ plt.show()
 plt.plot(taus, E, '-.', lw=4, label='Media')
 plt.title('Media de las realizaciones del proceso')
 plt.xlabel(r'$\tau$')
-plt.ylabel(r'$E_{X}(\tau)$')
+plt.ylabel(r'$E_{W}(\tau)$')
 plt.legend()
 plt.show()
 
