@@ -1,4 +1,4 @@
-# Base para la solución del Laboratorio 4
+# David Arguedas Lobo, B40536
 
 # Los parámetros T, t_final y N son elegidos arbitrariamente
 
@@ -74,11 +74,11 @@ plt.show()
 
 
 
-# Gráficas para la media
+# Gráficas para el valor esperador del proceso
 plt.plot(taus, E, '-.', lw=4, label='Media')
-plt.title('Media de las realizaciones del proceso')
+plt.title('Valor esperado del proceso')
 plt.xlabel(r'$\tau$')
-plt.ylabel(r'$E_{W}(\tau)$')
+plt.ylabel(r'$E_{w}(\tau)$')
 plt.legend()
 plt.show()
 
