@@ -74,7 +74,7 @@ plt.show()
 
 
 
-# Gráficas de para la media
+# Gráficas para la media
 plt.plot(taus, E, '-.', lw=4, label='Media')
 plt.title('Media de las realizaciones del proceso')
 plt.xlabel(r'$\tau$')
